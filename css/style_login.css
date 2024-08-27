@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-color: rgba(181, 181, 181, 0.2);
+  color: #000;
+}
+
+.wrapper {
+  width: 520px;
+  justify-content: center;
+  background: white;
+  color: #000;
+  border-radius: 10px;
+  padding: 30px 40px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper h1 {
+  font-size: 40px;
+  text-align: center;
+  color: black;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.input-box-u {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 50px;
+}
+
+.input-box-u input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  font-size: 16px;
+  color: #000;
+  padding: 0 20px;
+}
+
+.input-box-u input::placeholder {
+  color: #707070;
+}
+
+.input-box-u p {
+  font-size: 17px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+
+.input-box-p {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 30px; /* Ubah jarak bawah di sini */
+}
+
+.input-box-p input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  font-size: 16px;
+  color: #000;
+  padding: 0 20px;
+}
+
+.input-box-p input::placeholder {
+  color: #707070;
+}
+
+.input-box-p p {
+  font-size: 17px;
+  font-weight: 600;
+  color: #333;
+  margin-left: 5px;
+}
+
+.accept-link {
+  display: flex;
+  align-items: center;
+  font-size: 14.5px;
+  margin-top: 2px;
+  margin-bottom: 20px;
+}
+
+.accept-link label {
+  display: flex;
+  align-items: center;
+}
+
+.accept-link input {
+  accent-color: black;
+  margin-right: 9px;
+}
+
+.accept-link a {
+  color: black;
+  font-weight: 500;
+  margin-left: 3px;
+  text-decoration: none;
+}
+
+.accept-link a:hover {
+  text-decoration: underline;
+}
+
+.btn_login {
+  width: 100%;
+  height: 50px;
+  background: black;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn_login:hover {
+  background: #333;
+}
+
+.register-link {
+  font-size: 14.5px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.register-link a {
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* Kontainer Flexbox untuk menempatkan tombol secara horizontal */
+.button-container {
+  display: flex;
+  justify-content: center; /* Mengatur posisi tombol di tengah secara horizontal */
+  gap: 10px; /* Jarak antara tombol */
+}

@@ -1,0 +1,348 @@
+:root {
+  --primary: #010101;
+  --bg: #f9f9f9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: #000; /* Warna teks hitam untuk kontras lebih baik */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Transparansi sedikit lebih tinggi untuk visibilitas */
+  border-bottom: 1px solid rgb(105, 108, 110);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-family: "Cormorant Garamond", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #dbb23c;
+}
+
+.navbar .navbar-extra a svg {
+  width: 23px; /* Mengatur ukuran ikon */
+  height: 23px; /* Mengatur tinggi ikon */
+  margin: 0 0.5rem; /* Jarak antar ikon */
+  stroke: #000; /* Warna ikon */
+}
+
+.navbar .navbar-extra a:hover svg {
+  stroke: rgb(117, 118, 118); /* Warna ikon saat di-hover */
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 10px; /* Mengurangi padding agar tidak terlalu besar */
+  z-index: 1;
+  top: 100%; /* Mengatur posisi dropdown tepat di bawah ikon */
+  left: -50px; /* Menjaga dropdown tetap sejajar dengan ikon */
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-u {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-u .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.2);
+  padding: 10px; /* Mengurangi padding agar tidak terlalu besar */
+  z-index: 1;
+  top: 100%; /* Mengatur posisi dropdown tepat di bawah ikon */
+  left: -50px; /* Menjaga dropdown tetap sejajar dengan ikon */
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.dropdown-u .dropdown-content a {
+  color: black;
+  padding: 6px 8px;
+  text-decoration: none;
+  display: block;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.dropdown-u .dropdown-content a:hover {
+  background-color: #dbb23c;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.dropdown-u:hover .dropdown-content {
+  display: block;
+}
+
+.wrapper {
+  width: auto; /* Sesuaikan lebar wrapper dengan lebar gambar */
+  height: auto; /* Sesuaikan tinggi wrapper dengan tinggi gambar */
+  margin: 100px auto 0; /* Margin atas untuk ruang antara navbar dan gambar */
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  text-align: center; /* Memastikan gambar di tengah jika menggunakan display inline-block */
+}
+
+.images {
+  display: flex;
+  justify-content: center; /* Memusatkan gambar secara horizontal */
+  align-items: center; /* Memusatkan gambar secara vertikal */
+}
+
+/* Styling untuk container */
+.container {
+  width: 100%;
+  background-color: #ffffff; /* Warna latar belakang lebih lembut */
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  margin-top: 80px;
+  margin-bottom: 30px; /* Mengatur jarak bawah */
+}
+
+/* Styling untuk kategori teks */
+.container a {
+  display: block; /* Mengatur <a> sebagai block element untuk mengatur jarak dengan konten di bawahnya */
+  font-size: 25px; /* Ukuran font yang lebih besar untuk teks kategori */
+  font-weight: 700; /* Ketebalan font yang lebih tebal */
+  color: #333; /* Warna teks */
+  margin-bottom: 20px; /* Jarak antara teks kategori dan button-container */
+  text-decoration: none; /* Menghapus garis bawah pada teks */
+  transition: color 0.3s ease; /* Efek transisi saat hover */
+}
+
+/* Styling untuk button-container */
+.button-container {
+  display: flex;
+  flex-wrap: wrap; /* Agar tombol-tombol bisa membungkus ke baris berikutnya */
+  justify-content: center;
+  gap: 30px; /* Mengurangi jarak antar tombol */
+  margin: 20px 0; /* Mengatur jarak atas dan bawah */
+}
+
+/* Styling untuk button-wrapper */
+.button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styling untuk button */
+.button {
+  background-color: #ffffff;
+  border: 1px solid #ddd; /* Border ringan */
+  margin-top: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Bayangan lebih lembut */
+  color: #333;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  width: 80px; /* Lebar tombol lebih besar */
+  height: 80px; /* Tinggi tombol lebih besar */
+  border-radius: 20px; /* Sudut lebih membulat */
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Styling untuk gambar di dalam tombol */
+.button img {
+  max-width: 100%; /* Menyesuaikan ukuran gambar */
+  max-height: 100%; /* Menyesuaikan ukuran gambar */
+  object-fit: contain;
+}
+
+/* Styling untuk teks di bawah tombol */
+.button-text {
+  margin-top: 2px;
+  font-size: 17 px; /* Ukuran font lebih kecil */
+  font-weight: 600; /* Mengurangi ketebalan font */
+  color: #555; /* Warna teks sedikit lebih terang */
+  text-align: center;
+}
+
+/* Styling saat tombol di-hover */
+.button:hover {
+  background-color: #e0e0e0; /* Warna latar belakang lebih cerah saat hover */
+  border-color: #999; /* Warna border saat hover */
+  transform: scale(1.1); /* Efek pembesaran saat hover */
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.containers {
+  width: 400px;
+  height: auto;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  padding: 38px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.wrappers {
+  width: 100%;
+}
+
+.banner-image {
+  background-image: url(https://images.unsplash.com/photo-1641326201918-3cafc641038e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80);
+  background-position: center;
+  background-size: cover;
+  height: 200px;
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.255);
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-family: "Righteous", sans-serif;
+  color: rgba(255, 255, 255, 0.98);
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  margin: 10px 0;
+}
+
+p {
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.button-wrappers {
+  margin-top: 18px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  border: none;
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.outline {
+  background: transparent;
+  color: rgba(0, 212, 255, 0.9);
+  border: 1px solid rgba(0, 212, 255, 0.6);
+}
+
+.outline:hover {
+  transform: scale(1.125);
+  color: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.9);
+}
+
+.fill {
+  background: rgba(0, 212, 255, 0.9);
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: bold;
+  box-shadow: 0 10px 5px rgba(0, 0, 0, 0.125);
+}
+
+.fill:hover {
+  transform: scale(1.125);
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.175);
+}
+
+#menu {
+  display: none;
+}
+
+/* media queries */
+
+/* laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+/* tablet */
+@media (min-width: 451px) and (max-width: 1024px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* mobile */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
